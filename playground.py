@@ -8,10 +8,30 @@
 
 from scrapy.mail import MailSender
 
+import threading
+import queue
+from collections import deque
+from enum import Enum
+import time
+
+
 # Tips
 # Start a line with sharp (#) to create a comment
 # newline to seperate function/class from other code
 # start a scope with colon : follow by indented code
+
+"""
+Code convention
+Constants: all capital letters with underscores separating words.
+            MAX_LEN = 9
+
+Comments: 
+    Write docstrings for all public modules, functions, classes, and methods.
+    
+Single line comments     
+# Write comments after sharp and space 
+    
+"""
 
 # function
 def test():
@@ -113,7 +133,7 @@ class Person:
     # special method called constructor/initialization method
     # to create an object from class blueprint
     def __init__(self, name):
-        self.name = name  # instance variable
+        self._name = name  # private instance variable is preceded with a underscore _ to indicate private
         Person.count += 1
 
 
@@ -133,6 +153,14 @@ class Person:
     # first argument must be self to indicate that function is an instance method
     def info(self):
         print("name: " + self.name)     # Notation self.[instance-variable] to access instance variable
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        self._name = name
 
 
 # class
@@ -174,12 +202,116 @@ class Employee(Person):
 # Exception example
 # exceptionHandlerExample()
 
-
-
 # Class Example
-peter = Person("Peter")
-smith = Person.by_last_name("Smith")
-peter.info()
-Employee.count_people()
-john = Employee("John", 0)
-john.info()
+# peter = Person("Peter")
+# print(peter.name)
+#
+# smith = Person.by_last_name("Smith")
+# peter.info()
+# Employee.count_people()
+# john = Employee("John", 0)
+# john.info()
+
+
+# Thread with delay example
+#def hello():
+#    print ("hello, world")
+
+
+#t = threading.Timer(5.0, hello)
+#t.start() # after 30 seconds, "hello, world" will be printed
+
+
+# Thread with timeout example
+# def infinite_loop():
+#     while True:
+#         print(1, end='')
+#         time.sleep(0.5)
+#
+#
+# thread = threading.Thread(name="main", target=infinite_loop)
+# thread.start()
+# TIME_OUT_IN_SECONDS = 5
+# thread.join(TIME_OUT_IN_SECONDS)
+
+
+
+# thread delay example
+# def thread_delay_example(target, delay_in_seconds):
+#     if target is None or delay_in_seconds is None:
+#         return
+#
+#     thread = threading.Timer(delay_in_seconds, target)
+#     thread.start()
+#
+# def print_1():
+#     print("1", end='')
+#
+# thread_delay_example(print_1, 3)
+
+
+# repeating thread at interval example
+
+
+class Interval(object):
+
+    def __init__(self, interval, target):
+        super().__init__()
+        self._target = target
+        self._interval = interval
+
+    def start(self):
+        self._delay()
+
+    def stop(self):
+        self._interval = False
+
+    def _delay(self):
+        if self._interval:
+            self._target()
+            threading.Timer(self._interval, self._delay).start()
+
+def print_hello():
+    print("Hello")
+
+r = Interval(0.5, print_hello)
+r.start()
+r.interval = 1
+time.sleep(10)
+r.stop()
+
+
+# Queue example
+# q = queue.Queue()
+#
+# for i in range(5):
+#     q.put(i)
+#
+# while not q.empty():
+#     print(q.get())
+
+
+# Enum example
+# class OutputType(Enum):
+#     DIGITAL = 1
+#     ANALOG = 2
+
+# circular buffer example
+# class CircularBuffer(deque):
+#     def __init__(self, size=0):
+#         super().__init__(maxlen=size)
+#
+#     @property
+#     def average(self):  # TODO: Make type check for integer or floats
+#         return sum(self)/len(self)
+#
+#
+# cb = CircularBuffer(size=10)
+# for i in range(20):
+#     cb.append(i)
+#     print("%s" % (str(cb)))
+
+
+
+
+
