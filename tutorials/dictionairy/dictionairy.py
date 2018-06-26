@@ -1,24 +1,32 @@
 
+
 # create
-a_dictionairy = {"Name": "John", "Age": "15"}
+a_dictionary = {"Name": "John", "Age": "15"}
+
+# check if key exists
+if "Name" in a_dictionary.keys():
+    print(True)
 
 # access
-print("First element: " + a_dictionairy["Name"])
+print("First element: " + a_dictionary["Name"])
 
 # update
-a_dictionairy["Name"] = "Peter"
-print("Update First element: " + a_dictionairy["Name"])
+a_dictionary["Name"] = "Peter"
+print("Update First element: " + a_dictionary["Name"])
 
 # remove
-del a_dictionairy["Name"]
+del a_dictionary["Name"]
 
 # access all
-for key in a_dictionairy.keys():
+for key in a_dictionary.keys():
     print("key:" + key)
-for key, value in a_dictionairy.values():
+for key, value in a_dictionary.values():
     print("value:" + value)
-for key, value in a_dictionairy.items():
+for key, value in a_dictionary.items():
     print("key:" + key + "\nvalue:" + value)
 
 # remove all
-a_dictionairy.clear()
+a_dictionary.clear()
+
+
+#if __name__ == "__main__":

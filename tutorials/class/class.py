@@ -36,6 +36,9 @@ class Person:
     def name(self, name):
         self._name = name
 
+    # indicate to be override by child class
+    def speak(self):
+        pass
 
 # class
 # inheritance
