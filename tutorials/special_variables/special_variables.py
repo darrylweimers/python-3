@@ -1,6 +1,6 @@
 
 
-# Every class is a dictionary
+# Every class_test is a dictionary
 class Class(object):
     def __init__(self):
         pass

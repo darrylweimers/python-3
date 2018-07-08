@@ -59,7 +59,7 @@ print(json.dumps(class_object.__dict__))
 
 # Make a custom type json serializable
 
-# Custom class
+# Custom class_test
 class Rectangle(object):
     def __init__(self, base, height):
         self._base = base
@@ -73,13 +73,13 @@ META_DATA = "__" + Rectangle.__name__ + "__"
 #  - subclass of json.JSONEncoder
 # - implement method default from json.JSONEncoder
 class RectangleEncoder(json.JSONEncoder):
-    # implements default from base class
+    # implements default from base class_test
     def default(self, obj):
         if isinstance(obj, Rectangle):
             dictionary = obj.__dict__                  # Pass minimum data required to rebuild your instance during deserializtion process. Customize your own, but must be python data types, which are recognizeable by json
-            dictionary[META_DATA] = True               # add meta data for deserialization. key to indicate your class
+            dictionary[META_DATA] = True               # add meta data for deserialization. key to indicate your class_test
             return obj.__dict__  # customize your own, but must be python data types, which are recognizeable by json
-        # Let the base class default method raise the TypeError
+        # Let the base class_test default method raise the TypeError
         return json.JSONEncoder.default(self, obj)
 
 
