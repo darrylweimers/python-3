@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+#decision making: if and else
+def printHello(value):
+    if value is True:
+        print("Hello world")
+    else:
+        print("Input true to print_test hello world")
+=======
 # Topic: Flow control/ Decision making
 
 """
@@ -36,3 +44,4 @@ plats_cost = {'hot dog': 1.99, "fries": 0.99}
 
 
 
+>>>>>>> 8a7977e289f8a406325de0a72de21239f4a483e9

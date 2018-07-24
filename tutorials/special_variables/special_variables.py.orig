@@ -1,6 +1,10 @@
 
 
+<<<<<<< HEAD
 # Every classs is a dictionary
+=======
+# Every class_test is a dictionary
+>>>>>>> 8a7977e289f8a406325de0a72de21239f4a483e9
 class Class(object):
     def __init__(self):
         pass
@@ -8,7 +12,7 @@ class Class(object):
 
 print(Class().__dict__)
 
-# print anything if file is called
+# print_test anything if file is called
 print(" I am not main")
 
 
