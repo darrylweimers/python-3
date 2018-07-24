@@ -1,32 +1,38 @@
 
 
 # create
-a_dictionary = {"Name": "John", "Age": "15"}
+person = {"name": "John", "age": "18"}
+
+# add single element
+person["height"] = "108"
+print("height is", person["height"])
+
+# update element
+person["height"] = "180"
+print("height is", person["height"])
 
 # check if key exists
-if "Name" in a_dictionary.keys():
-    print(True)
+if "name" in person.keys():
+    print("name", "is a key of person dictionary")
+else:
+    print("name", "is not a key of person dictionary")
 
-# access
-print("First element: " + a_dictionary["Name"])
+# access value using key
+print("name is", person["name"])
 
-# update
-a_dictionary["Name"] = "Peter"
-print("Update First element: " + a_dictionary["Name"])
-
-# remove
-del a_dictionary["Name"]
+# remove key value pair
+del person["name"]
 
 # access all
-for key in a_dictionary.keys():
+for key in person.keys():
     print("key:" + key)
-for key, value in a_dictionary.values():
+for value in person.values():
     print("value:" + value)
-for key, value in a_dictionary.items():
+for key, value in person.items():
     print("key:" + key + "\nvalue:" + value)
 
 # remove all
-a_dictionary.clear()
+person.clear()
 
 
 #if __name__ == "__main__":

@@ -1,4 +1,4 @@
-# python tenary operation
+# print_test tenary operation
 # syntax: a if condition else b
 
 condition = True

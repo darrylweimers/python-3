@@ -3,4 +3,4 @@ def printHello(value):
     if value is True:
         print("Hello world")
     else:
-        print("Input true to print hello world")
+        print("Input true to print_test hello world")

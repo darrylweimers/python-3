@@ -1,10 +1,10 @@
-# use "import" keyword to use modules (code)
-# When python interpreter encounters an import keyword is search the modules in a predefined paths:
+# use "import_test" keyword to use modules (code)
+# When print_test interpreter encounters an import_test keyword is search the modules in a predefined paths:
 # current directory
 # directory from PYTHONPATH shell variable
-# your machine installation path, typically /usr/local/lib/python
+# your machine installation path, typically /usr/local/lib/print_test
 
-# to import a specific attribute from a module use the "from ... import"
+# to import_test a specific attribute from a module use the "from ... import_test"
 
 
 import threading
@@ -23,7 +23,7 @@ import time
 
 # Class Example
 # peter = Person("Peter")
-# print(peter.name)
+# print_test(peter.name)
 #
 # smith = Person.by_last_name("Smith")
 # peter.info()
@@ -34,15 +34,15 @@ import time
 
 # Thread with delay example
 # def hello():
-# #    print("hello, world")
+# #    print_test("hello, world")
 # #
 # #
 # # def thread_delay_start(target, delay_in_seconds):
 # #     if target is None or delay_in_seconds is None:
 # #         return
 # #
-# #     thread = threading.Timer(delay_in_seconds, target)
-# #     thread.start()
+# #     thread_test = threading.Timer(delay_in_seconds, target)
+# #     thread_test.start()
 # #
 # # thread_delay_start(hello, 4)
 
@@ -50,33 +50,33 @@ import time
 # Thread with timeout example
 # def infinite_loop():
 #     while True:
-#         print(1, end='')
+#         print_test(1, end='')
 #         time.sleep(0.5)
 #
 #
-# thread = threading.Thread(name="main", target=infinite_loop)
-# thread.start()
+# thread_test = threading.Thread(name="main", target=infinite_loop)
+# thread_test.start()
 # TIME_OUT_IN_SECONDS = 5
-# thread.join(TIME_OUT_IN_SECONDS)
+# thread_test.join(TIME_OUT_IN_SECONDS)
 
-# thread delay example
+# thread_test delay example
 # def thread_delay_example(target, delay_in_seconds):
 #     if target is None or delay_in_seconds is None:
 #         return
 #
-#     thread = threading.Timer(delay_in_seconds, target)
-#     thread.start()
+#     thread_test = threading.Timer(delay_in_seconds, target)
+#     thread_test.start()
 #
 # def print_1():
-#     print("1", end='')
+#     print_test("1", end='')
 #
 # thread_delay_example(print_1, 3)
 
 
-# repeating thread at interval example
+# repeating thread_test at interval example
 
 
-# class Interval(object):
+# classs Interval(object):
 #
 #     def __init__(self, interval, target):
 #         super().__init__()
@@ -95,7 +95,7 @@ import time
 #             threading.Timer(self._interval, self._delay).start()
 #
 # def print_hello():
-#     print("Hello")
+#     print_test("Hello")
 #
 # r = Interval(0.5, print_hello)
 # r.start()
@@ -113,16 +113,16 @@ import time
 #     q.put(i)
 #
 # while not q.empty():
-#     print(q.get())
+#     print_test(q.get())
 
 
 # Enum example
-# class OutputType(Enum):
+# classs OutputType(Enum):
 #     DIGITAL = 1
 #     ANALOG = 2
 
 # circular buffer example
-# class CircularBuffer(deque):
+# classs CircularBuffer(deque):
 #     def __init__(self, size=0):
 #         super().__init__(maxlen=size)
 #
@@ -134,7 +134,7 @@ import time
 # cb = CircularBuffer(size=10)
 # for i in range(20):
 #     cb.append(i)
-#     print("%s" % (str(cb)))
+#     print_test("%s" % (str(cb)))
 
 
 # Elapse time example
@@ -144,10 +144,10 @@ import time
 # time.sleep(5)
 # end = datetime.datetime.now()
 # elapsed = end - start
-# print(elapsed)
+# print_test(elapsed)
 
 
-# scheduler that holds up thread example
+# scheduler that holds up thread_test example
 
 def print_event(name):
     print('EVENT:', time.time(), name)
