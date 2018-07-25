@@ -76,7 +76,7 @@ import time
 # repeating thread at interval example
 
 
-# class Interval(object):
+# class_test Interval(object):
 #
 #     def __init__(self, interval, target):
 #         super().__init__()
@@ -117,12 +117,12 @@ import time
 
 
 # Enum example
-# class OutputType(Enum):
+# class_test OutputType(Enum):
 #     DIGITAL = 1
 #     ANALOG = 2
 
 # circular buffer example
-# class CircularBuffer(deque):
+# class_test CircularBuffer(deque):
 #     def __init__(self, size=0):
 #         super().__init__(maxlen=size)
 #
