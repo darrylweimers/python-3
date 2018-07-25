@@ -4,6 +4,13 @@
 # create a list
 a_list = ["a", "b", "c", "d"]
 
+# check if list is empty
+if a_list:
+    print("List is not empty")
+else:
+    print("List is empty")
+
+
 # access
 print("Last element: " + a_list[len(a_list) - 1])
 
@@ -56,12 +63,22 @@ print("{}".format(new_list))
 # if it contains non-string types (such as integers, floats, bools, None) then do:
 floats = [3.0, 4.5, 6.6, 7.89]
 new_list = ','.join(map(str, floats))
+print(type(new_list))
+print(new_list)
+new_list = new_list.split(",")
+print(type(new_list))
 print(new_list)
 
-# convert a list into a string and remove brace
-integers = [1, 2, 3, 4]
-integers_str = str(integers)
-integers_str_without_brace = integers_str.strip("[]")
-print(integers_str_without_brace)
+# convert a string seperated by comma into a list
+names = 'Sam, Peter, John, Albert'
+new_list = names.split(",")
+print(new_list)
+
+
+# Join two list
+list_a = [1, 2, 3]
+list_b = [4, 5, 6]
+list_c = list_a + list_b
+
 
 
