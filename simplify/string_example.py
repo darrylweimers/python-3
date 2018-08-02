@@ -1,43 +1,87 @@
-import  string
+print("""
+----------------------------------------------
 
+DECLARE A STRING
 
+Syntax:
 
-# Declare a string
+ string_name = 'string value'
+ string_name = "string value"
 
+Note:
+ - string value is enclosed between single, double or triple double quote
+Example:
+""")
 a_string = "string"
-print(a_string)
+print('string:', a_string)
 a_string = 'string'
-print(a_string)
+print('string:', a_string)
 
-var = 4
-var2 = 6.0
-a_string = f"value {var} {var2}"
-print(a_string)
-# basic string format
-CONST = "{}"
-print(CONST.format("WORKS"))
-# string to byte
-'data'.encode('utf-8')
 
-# use strip function
-# remove trailing or leading whitespace
+
+print("""
+----------------------------------------------
+
+STRING FORMATTING
+
+Syntax:
+
+ string_name = "{} {}".format("Hello", "World")
+
+Example:
+""")
+string_name = "{} {}".format("Hello", "World")
+print(string_name)
+
+
+
+print("""
+----------------------------------------------
+
+REMOVE LEADING AND TRAILING WHITE SPACE
+
+Syntax:
+
+ some_string = " string "
+ result = some_string.strip()
+
+Example:
+""")
+a_string = " some string "
+print('original string:' + a_string)
 a_string = a_string.strip()
-print(a_string)
+print('new string:' + a_string)
 
-# find a character in string
-print("From string: ", a_string)
+
+
+print("""
+----------------------------------------------
+
+FIND CHARACTER IN STRING
+
+Syntax:
+
+ some_string = " string "
+ character = 's'
+ result = some_string.find(character)
+
+Example:
+""")
+a_string = "Awesome"
+print("String:", a_string)
 character = 's'
-print("From string:", character, "result:", a_string.find(character))
-character = 'm'
-print("From string:", character, "result:", a_string.find(character))
+print("Character", character, 'was first found at index', a_string.find(character))
 
-# catch empty string
-empty_string = ""
-print("From string: ", empty_string)
-if not empty_string:
-    print("It is a empty string")
 
-# string format
 
-a_string = '{} {}'.format("Peter", "Pan")
-print(a_string)
+
+#
+# # catch empty string
+# empty_string = ""
+# print("From string: ", empty_string)
+# if not empty_string:
+#     print("It is a empty string")
+#
+#
+# # string to byte
+# 'data'.encode('utf-8')
