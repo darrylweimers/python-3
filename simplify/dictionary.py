@@ -1,13 +1,14 @@
 """
 Dictionary
 
-- unordered collections
-- items are stored and fetched by key
-- key is unique; it is a set
+is a mapping of unique keys to values
 
+- unordered collection
+- items are stored and fetched by key
+- keys are unique
+- item can be changed (mutable)
 """
 
-D = {x: x*2 for x in range(10)}
 
 # Create
 key = "name"
@@ -58,4 +59,17 @@ else:
 
 
 # Remove all
+print("Remove all items from dictionary")
 person_attributes.clear()
+print('Fetch key and value:')
+for key, value in person_attributes.items():
+    print("({}: {})".format(key, value), end=", ")
+else:
+    print('None')
+print()
+
+
+
+
+# advance
+#D = {x: x*2 for x in range(10)}

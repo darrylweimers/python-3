@@ -1,10 +1,10 @@
 #from tutorials.system import_test system
-from tutorials.list.list_test import *
+#from tutorials.list.list_test import *
 #from tutorials.loop import_test loop
-#from tutorials.json import_test json
+#from tutorials.json.json_test import *
 #import tutorials.string.string
 #import tutorials.special_variables.special_variables
-#erom tutorials.enum import_test enum
+from tutorials.enum.enum_example import *
 #from tutorials.dictionairy import_test dictionairy
 #from tutorials.config import_test config
 #from tutorials.tuple import_test tuple
@@ -94,6 +94,5 @@ from tutorials.list.list_test import *
 # data5 = "12334234234234324234234\n"
 # buffer.append(data5)
 # print(len(buffer))
-
 
 

@@ -81,3 +81,26 @@ print(s)
 
 
 # if __name__=='__main__':
+
+
+
+# using setter
+class Result(object):
+
+    @property
+    def state(self):
+        return self._state
+
+    # constructors
+    def __init__(self, state: int):
+        super().__init__()
+        self._set_state(state)
+
+    # Setters
+    def _set_state(self, state):
+        self._state = state
+        print(state)
+
+r = Result(3)
+print(r.state)
+print()
