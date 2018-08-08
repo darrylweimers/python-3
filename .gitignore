@@ -2,4 +2,4 @@
 *.pyc
 .idea/
 venv/
-.dstore
+.DS_Store
