@@ -20,20 +20,34 @@ CREATE A LIST
 
 Syntax:
 
- list_name = [ item-0 , item-1, item-2 ]
+    list_name = [ item0 , item1, item2 ]
 
-   index         0         1        2
+           index    0       1      2
 
 Note:
  - item (any data type including custom class object) separated by comma
- - list is denoted by square bracket []
  - index start from 0
 
 Example:
 """)
-a_list = [0, "b", 3.0, False]
-print("list:", a_list)
-print("\n----------------------------------------------\n\n\n")
+print('list_1 = [0, "b", 3.0, False]')
+list_1 = [0, "b", 3.0, False]
+print("list:", list_1)
+
+print("""
+----------------------------------------------
+
+SIZE OF LIST
+
+Syntax:
+
+   size = len(list)
+
+Example:
+""")
+print("list:", list_1)
+
+print("Number of item in list:", len(list_1))
 
 
 
@@ -46,43 +60,21 @@ FETCH ALL ITEMS
 Syntax:
 
  for item in list:
-    statement
+    # do something with item
 
 Example:
 """)
-a_list = [0, "b", 3.0, False]
-print("list:", a_list)
+print("list:", list_1)
+
 print('Fetch items:')
-for item in a_list:
+for item in list_1:
     print("{}".format(item), end=", ")
-print("\n----------------------------------------------\n\n\n")
-
-
 
 
 print("""
 ----------------------------------------------
 
-Size of list
-
-Syntax:
-
-   size = len(list)
-
-Example:
-""")
-a_list = [0, "b", 3.0, False]
-print("list:", a_list)
-print("Number of item in list:", len(a_list))
-print("\n----------------------------------------------\n\n\n")
-
-
-
-
-print("""
-----------------------------------------------
-
-FETCH A ITEM
+FETCH ITEM
 
 Syntax:
 
@@ -90,11 +82,10 @@ Syntax:
 
 Example:
 """)
-a_list = [0, "b", 3.0, False]
-print("list:", a_list)
-print("First item:", a_list[0])
-print("Last item:", a_list[len(a_list) - 1])
-print("\n----------------------------------------------\n\n\n")
+print("list:", list_1)
+
+print("First item:", list_1[0])
+print("Last item:", list_1[len(list_1) - 1])
 
 
 
@@ -102,7 +93,7 @@ print("\n----------------------------------------------\n\n\n")
 print("""
 ----------------------------------------------
 
-Update/replace item
+UPDATE ITEM
 
 Syntax:
 
@@ -110,34 +101,100 @@ Syntax:
 
 Example:
 """)
-a_list = [0, "b", 3.0, False]
-print("list:", a_list)
+print("list:", list_1)
+
 new_value = 4
-a_list[-1] = new_value
+list_1[-1] = new_value
 print("Replace last item with", new_value)
-print("list:", a_list)
-print("\n----------------------------------------------\n\n\n")
-
-
-
+print("list:", list_1)
 
 
 print("""
 ----------------------------------------------
 
-Delete item
+ADD ITEM
 
 Syntax:
 
-    del list[index]
+    A)  list.insert(index, new_item)
+    B)  list.append(new_item)
+
+Note
+    A) Add new item to desired position in list
+    B) Add new item to end of list
 
 Example:
 """)
-a_list = [0, "b", 3.0, 4]
-print("list:", a_list)
-del a_list[0]
-print("list:", a_list)
-print("\n----------------------------------------------\n\n\n")
+print("list:", list_1)
+
+print('A) list_2.insert(0, "item")')
+list_1.insert(0, "item")
+print("list:", list_1)
+
+print('A) list_2.append("new item")')
+list_1.append("new item")
+print("list:", list_1)
+
+
+print("""
+----------------------------------------------
+
+MERGE LIST
+
+Syntax:
+
+    new_list = list_1 + list_2
+
+Example:
+""")
+print("list 1:", list_1)
+list_2 = ["a", "b"]
+print("list 2:", list_2)
+resultant_list = list_1 + list_2
+print("resultant list:", resultant_list)
+
+
+print("""
+----------------------------------------------
+
+DELETE ITEM
+
+Syntax:
+
+    A)  del list[index]
+    B)  list.remove(item)
+    C)  item = list.pop(index)
+
+Example:
+""")
+print("list:", list_1)
+
+del list_1[0]
+print("list:", list_1)
+
+list_1.remove('b')
+print("list:", list_1)
+
+item = list_1.pop(0)
+print("list:", list_1)
+print("item pop:", item)
+
+print("""
+----------------------------------------------
+
+REMOVE ALL ITEMS
+
+Syntax:
+
+    list.clear()
+
+Example:
+""")
+print("list:", list_1)
+
+print("Remove all items from list")
+list_1.clear()
+print("Dictionary:", list_1)
 
 
 

@@ -1,22 +1,73 @@
-print("""
+print(r"""
 ----------------------------------------------
 
 DECLARE A STRING
 
 Syntax:
 
- string_name = 'string value'
- string_name = "string value"
+ A) string_name = 'string value'
+ B) string_name = "string value"
 
-Note:
- - string value is enclosed between single, double or triple double quote
 Example:
 """)
-a_string = "string"
+a_string = 'Shop'
 print('string:', a_string)
-a_string = 'string'
+a_string = "Restaurant"
 print('string:', a_string)
 
+print("""
+----------------------------------------------
+
+SIZE
+
+Syntax:
+
+   size = len(string)
+
+Example:
+""")
+print('string:', a_string)
+
+print("Number of characters", len(a_string))
+
+
+
+print(r"""
+----------------------------------------------
+
+ESCAPE SEQUENCE
+
+  common: escape sequences
+          newline       \n
+          tab           \t
+          single quote  \'
+          double quote  \"
+
+Syntax:
+
+  string = '\tstring\tvalue\n'
+
+Example:
+""")
+a_string = "Dear\tRamsay,\nI am writing this \"letter\"..."
+print('string:', a_string)
+
+
+print(r"""
+----------------------------------------------
+
+RAW STRING
+
+  Like normal string with escape sequence ignored.
+
+Syntax:
+
+  string = r'\tstring\tvalue\n'
+
+Example:
+""")
+a_string = r"Dear\tRamsay,\nI am writing this \"letter\"..."
+print('string:', a_string)
 
 
 print("""
@@ -33,6 +84,24 @@ Example:
 string_name = "{} {}".format("Hello", "World")
 print(string_name)
 
+
+print("""
+----------------------------------------------
+
+STRING CONCATENATION
+
+Syntax:
+
+ final_string = string1 + string2
+
+Example:
+""")
+string1 = "Hello"
+string2 = " World"
+print("String 1:", string1)
+print("String 2:", string2)
+resultant_string = string1 + string2
+print(string_name)
 
 
 print("""
@@ -72,6 +141,28 @@ print("String:", a_string)
 character = 's'
 print("Character", character, 'was first found at index', a_string.find(character))
 
+
+
+print("""
+----------------------------------------------
+
+REPLACEMENT
+
+    replace all occurrence of a string
+
+Syntax:
+
+    resultant_string = string.replace('to replace', 'replacement')
+
+Example:
+""")
+a_string = "Idealistic"
+replace = "listic"
+replacement = 'l'
+print('string:', a_string)
+print('Replace "{}" by "{}"'.format(replace, replacement))
+resultant_string = a_string.replace(replace, replacement)
+print('string:', resultant_string)
 
 
 
