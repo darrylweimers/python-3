@@ -26,7 +26,7 @@ Syntax:
 
 Note:
  - item (any data type including custom class object) separated by comma
- - index start from 0
+ - access by offset start from index 0
 
 Example:
 """)

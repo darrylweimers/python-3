@@ -77,13 +77,25 @@ STRING FORMATTING
 
 Syntax:
 
- string_name = "{} {}".format("Hello", "World")
+ A) Relative position
+
+    string = "{} {}".format("Hello", "World")
+
+ B) Position
+
+    string = "{0} {1}".format("Hello", "World")
+
+ C) Keyword
+    string = "{hi} {world}".format(hi="hello", world="World")
 
 Example:
 """)
 string_name = "{} {}".format("Hello", "World")
 print(string_name)
-
+string_name = "{0} {0} {1}".format("Hello", "World")
+print(string_name)
+string_name = "{intro} {to}".format(intro="Hello", to="World")
+print(string_name)
 
 print("""
 ----------------------------------------------
