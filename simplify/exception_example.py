@@ -3,16 +3,26 @@ print("""
 
 EXCEPTION
 
-Unexpected exception , that is triggered by python compiler or user code,
-can crash a program if not handle.
+    definition:
 
-----------------------------------------------
-\n\n\n""")
+        Exceptions are triggered automatically on errors from your code.
+        If exception is not intercepted, python interpreter will crash program and show error.
+
+    purpose:
+
+        A way to intercept and handle error
+        Event notification without the need to create result flags
+        
+
+
+""")
 
 print("""
 ----------------------------------------------
 
-RAISE EXCEPTION
+RAISE AN EXCEPTION
+
+    A way for a developer to signal python interpreter of an existent exception.
 
 Syntax:
 
@@ -20,6 +30,38 @@ Syntax:
 
 Example:
 """)
+print('raise Exception("Testing exception")')
+#raise Exception("Testing exception")
+
+
+
+print("""
+----------------------------------------------
+
+RAISE AN EXCEPTION
+
+    A way for a developer to signal python interpreter of an existent exception.
+
+Syntax:
+
+    raise Exception("message")
+
+Example:
+""")
+print('raise Exception("Testing exception")')
+#raise Exception("Testing exception")
+
+
+print("""
+----------------------------------------------
+
+EXCEPTION TRIGGER BY PYTHON INTERPRETER
+
+Example:
+""")
+print('divide_by_zero = 8 / 0')
+# divide_by_zero = 8 / 0
+
 
 print("""
 ----------------------------------------------
@@ -29,7 +71,7 @@ HANDLE EXCEPTION
 Syntax:
 
     try:
-        statements
+        statements that may raise exception
     except Exception_1:
         handler_1
     except (Exception_2, Exception_3):
@@ -41,48 +83,65 @@ Syntax:
     else:
         statements if no exception
     finally:
-        statements to run with or without exception
+        statements with or without exception
+
+note:
 
 Example:
 """)
 
+numbers = [1, 2, 3]
+try:
+    index = 0
+    print("*FETCH OPERATION*")
+    print('list:', numbers)
+    print('Fetch number at index {index}:'.format(index=index))
+    number = numbers[index]
+# except IndexError:
+#     print("Encounter index error exception")
+# except IndexError as exception:
+#     print("Encounter index error exception:", exception)
+except Exception as exception:
+    print("Encounter generalize exception:", exception)
+else:
+    print('Result:', number)
+finally:
+    print('*END OF OPERATION*')
 
 
 
-# try:
-#     # Operation that may throw an exception
-#     file = open('Testfile', "w")
-#     file.write("Testing exception handler")
-# except IOError:
-#     # Execute this block when an exception is raised
-#     print("Can't write to file")
-# else:
-#     # Execute this block if no exception
-#     print("Written to file")
-#     file.close()
-# finally:
-#     # Always execute
-#     print("Done!")
 
 
-# raise exception
-# throw/raise an exception when certain condition occurs
-def function_raise_exception():
-    raise Exception("Illegal action")
 
 
-# capture the exception
-def capture_exception():
-    try:
-        function_raise_exception()
-    except Exception as ex:
-        print(ex)
+print("""
+----------------------------------------------
 
-# capture the exception and arguments
+ASSERT
+
+    Assert is exception
+    Use assert to raise exception from the start of a long sequences of statements
+
+Syntax:
+
+    A) assert test, data
+    B) assert test
+
+note:
+
+If test is false, compiler raise assert exception.
+Optionally, print data if provided.
+
+Example:
+""")
+x = 8
+assert x != 0, "divide by zero error"
+y = 5 / x
+print('result:', y)
 
 
-def capture_exception():
-    try:
-        function_raise_exception()
-    except Exception as ex:
-        print(ex)
+
+
+with open(r'C:\misc\data') as myfile:
+    for line in myfile:
+        print(line)
