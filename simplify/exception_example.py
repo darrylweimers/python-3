@@ -8,65 +8,14 @@ EXCEPTION
         Exceptions are triggered automatically on errors from your code.
         If exception is not intercepted, python interpreter will crash program and show error.
 
-    purpose:
-
-        A way to intercept and handle error
-        Event notification without the need to create result flags
-        
-
-
 """)
-
-print("""
-----------------------------------------------
-
-RAISE AN EXCEPTION
-
-    A way for a developer to signal python interpreter of an existent exception.
-
-Syntax:
-
-    raise Exception("message")
-
-Example:
-""")
-print('raise Exception("Testing exception")')
-#raise Exception("Testing exception")
-
-
-
-print("""
-----------------------------------------------
-
-RAISE AN EXCEPTION
-
-    A way for a developer to signal python interpreter of an existent exception.
-
-Syntax:
-
-    raise Exception("message")
-
-Example:
-""")
-print('raise Exception("Testing exception")')
-#raise Exception("Testing exception")
-
-
-print("""
-----------------------------------------------
-
-EXCEPTION TRIGGER BY PYTHON INTERPRETER
-
-Example:
-""")
-print('divide_by_zero = 8 / 0')
-# divide_by_zero = 8 / 0
-
 
 print("""
 ----------------------------------------------
 
 HANDLE EXCEPTION
+
+    Capture and resolve an exception to prevent program crash.
 
 Syntax:
 
@@ -84,8 +33,6 @@ Syntax:
         statements if no exception
     finally:
         statements with or without exception
-
-note:
 
 Example:
 """)
@@ -108,6 +55,57 @@ else:
 finally:
     print('*END OF OPERATION*')
 
+print("""
+----------------------------------------------
+
+RAISE AN EXCEPTION
+
+
+    Inform python interpreter of an error.  Have it go to higher level of your program
+    to find an exception handler or crash the program. This is useful because at time lower level
+    program can't handle error, but higher level of your program can.
+
+
+
+
+
+    Signal python interpreter of an existent exception with the following purposes:
+
+    1. Have python interpreter go to higher level of your program
+    2. Have python interpreter find an exception handler or crash the program
+    3. Benefits of 1 and 2, in certain cases lower level of your program can't handle an error, but higher
+       level or your program can.
+    4. Similar to 3, but there isn't any error to handle, whereas you want to provide outcome or status to
+       other higher level of your program for reference.
+
+    -A way to tell python interpreter that you can't handle a task and assume
+        that higher level of your program can.
+        -Indicate to python interpreter with your incapability to handle an unusual outcome of a task
+        and assume that higher level of your program will handle it.
+        A way to provide a status of a task to higher level of your program.
+Syntax:
+
+    raise Exception("message")
+
+Example:
+""")
+print('raise Exception("Testing exception")')
+#raise Exception("Testing exception")
+
+
+print("""
+----------------------------------------------
+
+EXCEPTION CAUGHT BY PYTHON INTERPRETER
+
+    After an exception is raised, python interpreter navigates to higher level of
+    your program to find an exception handler. If no handler is found, python interpreter
+    will crash program.
+
+Example:
+""")
+print('divide_by_zero = 8 / 0')
+# divide_by_zero = 8 / 0
 
 
 
@@ -119,18 +117,23 @@ print("""
 
 ASSERT
 
-    Assert is exception
-    Use assert to raise exception from the start of a long sequences of statements
+        Check assumptions made by programmer before executing code that follows.
+        Assert raise an exception if assumption made is false.
+
+    purpose:
+
+        A debug method used at the start of a function to validate inputs.
+        A debug method used at the start of a large code.
 
 Syntax:
 
-    A) assert test, data
-    B) assert test
+    A) assert test
+    B) assert test, data
 
-note:
+Note:
 
-If test is false, compiler raise assert exception.
-Optionally, print data if provided.
+A) If test is false, signal an assert exception.
+B) Same as A. In addition, print an error message.
 
 Example:
 """)
