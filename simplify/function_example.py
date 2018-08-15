@@ -169,15 +169,38 @@ Note:
 Example:
 """)
 add = lambda x, y: x + y
-print(add(3, 4))
+print("lambda:", 'add = lambda x, y: x + y')
+print('Result:', add(3, 4))
 
-# Returns a list of the results after applying the given function
-# to each item of a given iterable
-print(numbers)
-result = map(add_1, numbers)
-print(list(result))
+print("""
+----------------------------------------------
+
+LAMBDA AND MAP
+
+    using lambda with python built-in map function 
+    
+MAP:
+    
+    Applies the given function to each item of a given iterable
+    (list, tuple, ...) 
+
+Example 1:
+""")
+
+print("Given numbers:", numbers)
+map_object = map(add_1, numbers)
+print("Mapped with function add_1:", list(map_object))
+
+print("""
+----------------------------------------------
+
+LAMBDA AND MAP
+
+Example 2:
+""")
+print("Given set 1:", numbers)
+print("Given set 2:", numbers)
+map_object = map(sum, numbers, numbers)
+print("Mapped with function sum:", list(map_object))
 
 
-print(numbers)
-result = map(sum, numbers, numbers)
-print(list(result))
