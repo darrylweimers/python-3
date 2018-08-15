@@ -1,6 +1,12 @@
 
 Statement:
-A statement is a complete line of code that performs some action,
+A statement is a complete line of code that performs some action.
 
 Expression:
 An expression is any section of the code that evaluates to a value
+
+Variable:
+A memory space to store a value. Size of the memory space is created based on a particular data type.
+
+Assign value to variable:
+Provide/update value in memory space reserved for a .
