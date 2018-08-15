@@ -2,47 +2,182 @@ print("""
 ----------------------------------------------
 
 FUNCTION
+    
+    block of code to complete a task 
 
 - maximize code reuse and minimize redundancy
-- procedural decomposition
+- increase readability in large program 
 
+Note:
+    In python, function does not exist until execution. 
 ----------------------------------------------
 \n\n\n""")
 
 
 
+print("""
+----------------------------------------------
 
-"""
+DEFINE FUNCTION 
+
+Syntax:
+
+    def function_name (parameter):
+        code 
+        return code 
+
+Note: 
+    keyword def creates a function object and assign it an identifier (e.g. function_name) 
+    code block begins with : and and is indented 
+    code block use parameter(s) to complete task 
+    use keyword return to provide output to user 
+
+Example:
+""")
 
 
-Note:
-
- def:
-    creates a function object and assign it a name
-    function itself does not exist until Python runs the def
+# 1 parameter
+def add_1(x):
+    return x + 1
 
 
-"""
+# 2 parameter
+def sum(x, y):
+    return x + y
 
-# function
-def test():
-    print("hello world")
+
+# variable length
+def total(*x):
+    sum_result = 0
+    for value in x:
+        sum_result += value
+    return sum_result
+
 
 # function with argument and default argument
-def sum(a, b = 4):
-     return a + b
+def quotient(dividend, divisor=1):
+    return dividend / divisor
 
-# function arguments are pass by reference only
+
+# parameter is pass by reference only
+# the called function can modify the value of the parameter
 def update(x):
     x = 9
     print("x is " + str(x))
 
 
-# Function example
-test()
-print("The sum is: " + str(sum(3, 3)))
-print("The sum is: " + str(sum(3)))
-x = 1
-update(x)
-printHello(True)
-printHelloFor(4)
+
+print("""
+----------------------------------------------
+
+CALL/INVOKE FUNCTION 
+    
+    call function with 1 parameter 
+    
+Example:
+""")
+number = 4
+print("Number:", number)
+print('Call function: add_1(number)')
+print('Result:', add_1(number), end="\n\n")
+
+
+print("""
+----------------------------------------------
+
+CALL/INVOKE FUNCTION 
+
+    call function with 2 parameter 
+
+Example:
+""")
+numbers = [1, 2]
+print("Numbers:", numbers)
+print('Call function: sum(numbers[0], numbers[1])')
+print('Result:', sum(numbers[0], numbers[1]), end="\n\n")
+
+print("""
+----------------------------------------------
+
+CALL/INVOKE FUNCTION 
+
+    call function with variable parameter 
+
+Example:
+""")
+print("Numbers:", 1, 2, 3)
+print('Call function: total(1, 2, 3)')
+print('Result:', total(1, 2, 3), end="\n\n")
+
+
+print("""
+----------------------------------------------
+
+CALL/INVOKE FUNCTION 
+
+    call function with default parameter 
+
+Example:
+""")
+print("Number:", number)
+print('Call function: quotient(number)')
+print('Result:', quotient(number), end="\n\n")
+
+
+print("Number:", number)
+print('Call function: quotient(number, 2)')
+print('Result:', quotient(number, 2), end="\n\n")
+
+
+print("""
+----------------------------------------------
+
+CALL/INVOKE FUNCTION 
+
+    call function by keyword argument 
+
+Note:
+
+This allows you to skip arguments or place them
+out of order because the Python interpreter is able to use the
+keywords provided to match the values with parameters.
+
+Example:
+""")
+print('Call function: quotient(divisor=4, dividend=8)')
+print('Result:', quotient(divisor=4, dividend=8), end="\n\n")
+
+print("""
+----------------------------------------------
+
+LAMBDA
+
+    lambda is an anonymous function.
+    
+    purpose:
+    
+    Lambda functions are mainly used in combination with the functions 
+    filter(), map() and reduce()
+    
+syntax:
+    
+    function_object = lambda parameter_1, parameter_2: expression 
+
+Note:
+    operator lambda can have any number of arguments
+    
+Example:
+""")
+add = lambda x, y: x + y
+print(add(3, 4))
+
+# Returns a list of the results after applying the given function
+# to each item of a given iterable
+print(numbers)
+result = map(add_1, numbers)
+print(list(result))
+
+
+print(numbers)
+result = map(sum, numbers, numbers)
+print(list(result))

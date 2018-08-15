@@ -74,6 +74,25 @@ print("First item:", tuple_1[0])
 print("Last item:", tuple_1[len(tuple_1) - 1])
 
 
+print("""
+----------------------------------------------
+
+FETCH ALL ITEMS
+
+Syntax:
+
+ for item in tuple_identifier:
+    # do something with item
+
+Example:
+""")
+print("tuple:", tuple_1)
+
+print('Fetch items:')
+for item in tuple_1:
+    print("{}".format(item), end=", ")
+
+
 
 print("""
 ----------------------------------------------
