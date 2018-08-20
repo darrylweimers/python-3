@@ -163,11 +163,15 @@ print("""
 Logical Operators
 
     
-    operator 
-      and 
-      or 
-      not       reverse 
+    operator    description
+      and       if both of the operands are True then logic state is True
+      or        if any of the two operands are True then logic state is True
+      not       reverse the logic state 
 
+Note:
+
+    logic state can be either True or False 
+    
 Example:
 """)
 
@@ -196,9 +200,60 @@ print("""
 
 Bitwise Operators
 
+    operator        Definition 
+    
+      &             bitwise AND 
+      |             bitwise OR 
+      ^             bitwise exlusive or 
+      ~             bitwise NOT 
+      <<            bitwise left shift 
+      >>            bitwise right shift 
 
 Example:
 """)
+
+
+def print_binary_operation(operator, bin_1, bin_2, res):
+    print("binary_1:  \t{binary_1:#06b}".format(binary_1=bin_1))
+    print("operation: {operator}".format(operator=operator))
+    print("binary_2:  \t{binary_2:#06b}".format(binary_2=bin_2))
+    print("---------------------------")
+    print("result:    \t{result:#06b}".format(result=res), end="\n\n")
+
+
+def print_unary_operation(operator, bin_1, res):
+    print("binary_1:  \t{binary_1:#06b}".format(binary_1=bin_1))
+    print("operation: {operator}".format(operator=operator))
+    print("---------------------------")
+    print("result:    \t{result:#06b}".format(result=res), end="\n\n")
+
+
+binary_1 = 0b1100
+binary_2 = 0b1010
+
+result = binary_1 & binary_2
+print_binary_operation("&", binary_1, binary_2, result)
+
+result = binary_1 | binary_2
+print_binary_operation("|", binary_1, binary_2, result)
+
+result = binary_1 ^ binary_2
+print_binary_operation("^", binary_1, binary_2, result)
+
+
+operator = "~"
+result = ~binary_2
+print(result)
+print_unary_operation(operator, binary_1, result)
+
+
+operator = "<< 2"
+result = binary_1 << 2
+print_unary_operation(operator, binary_1, result)
+
+operator = ">> 1"
+result = binary_1 >> 1
+print_unary_operation(operator, binary_1, result)
 
 
 print("""
@@ -231,9 +286,37 @@ Identity Operators
 Example:
 """)
 
-result = number in numbers
-print("Number '{number}' is in {list}. Answer: {result}".format(number=number, list=numbers, result=result))
+result = number is numbers
+print("Number '{number}' equals to numbers '{list}'. Answer: {result}".format(number=number, list=numbers, result=result))
+
+result = number is not numbers
+print("Number '{number}' not equals to numbers '{list}'. Answer: {result}".format(number=number, list=numbers, result=result))
 
 
-print(numbers is numbers)
-print(number is numbers)
+print("""
+----------------------------------------------
+Operator precedence 
+
+    operator is executed by priority level. 
+    List of operator from highest to lowest priority 
+    
+    
+    High
+            operator                definition 
+            **                      Exponent operator
+            ~ + -                   Unary operator e.g. ~logic_state, +positive_number, -negative_number
+            * / % //                arithmetic operator 
+            + -                     arithmetic operator
+            >> <<                   bit shifting operator 
+            &                       bit operator
+            ^ |                     bit operator 
+            <= < > >=               comparison operator
+            == !=                   equality operator 
+            = %= /= *= **= += -=    assignment operator 
+            is is not               identity operator 
+            in not in               membership operator
+            not or and              logical operator
+    Low
+    
+    
+""")
