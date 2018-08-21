@@ -12,7 +12,6 @@ TUPLE
 \n\n\n""")
 
 
-
 print("""
 ----------------------------------------------
 
@@ -32,13 +31,12 @@ Note:
 
 Example:
 """)
-print('tuple_1 = (0, "b", 3.0)')
-tuple_1 = (0, "b", 3.0)
-print("tuple 1:", tuple_1)
 
-print('tuple_2 = 0.5, "abc"')
-tuple_2 = 0.5, "abc"
-print("tuple 2:", tuple_2)
+tuple_1 = (1, 2.5, "a")
+print("tuple_1:", tuple_1)
+
+tuple_2 = 1, 6.7, "c"
+print("tuple_2:", tuple_2)
 
 print("""
 ----------------------------------------------
@@ -51,10 +49,13 @@ Syntax:
 
 Example:
 """)
-print("tuple:", tuple_1)
 
-print("Number of item in tuple:", len(tuple_1))
 
+tuple_1 = (1, 2.5, "a")
+print("tuple_1:", tuple_1)
+
+size = len(tuple_1)
+print("Number of items in tuple_1:", size)
 
 
 print("""
@@ -68,10 +69,12 @@ Syntax:
 
 Example:
 """)
-print("tuple:", tuple_1)
+
+tuple_1 = (1, 2.5, "a")
+print("tuple_1:", tuple_1)
 
 print("First item:", tuple_1[0])
-print("Last item:", tuple_1[len(tuple_1) - 1])
+print("Last item:", tuple_1[len(tuple_1)-1])
 
 
 print("""
@@ -86,12 +89,13 @@ Syntax:
 
 Example:
 """)
-print("tuple:", tuple_1)
 
-print('Fetch items:')
+tuple_1 = (1, 2.5, "a")
+print("tuple_1:", tuple_1)
+
+print("Fetch all items in tuple_1:")
 for item in tuple_1:
-    print("{}".format(item), end=", ")
-
+    print(item)
 
 
 print("""
@@ -105,8 +109,12 @@ Syntax:
 
 Example:
 """)
-print("tuple 1:", tuple_1)
-print("tuple 2:", tuple_2)
-resultant_tuple = tuple_1 + tuple_2
-print("resultant tuple:", resultant_tuple)
 
+tuple_1 = (1, 2.5, "a")
+print("tuple_1:", tuple_1)
+
+tuple_2 = 9, 4, "hu"
+print("tuple_2:", tuple_2)
+
+a_tuple = tuple_1 + tuple_2
+print("a_tuple:", a_tuple)

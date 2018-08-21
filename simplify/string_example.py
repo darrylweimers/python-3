@@ -10,10 +10,18 @@ Syntax:
 
 Example:
 """)
-a_string = 'Shop'
-print('string:', a_string)
-a_string = "Restaurant"
-print('string:', a_string)
+
+string_1 = "Shop"
+print("string_1:", string_1)
+
+string_2 = 'Restaurant'
+print("string_2:", string_2)
+
+string_3 = """I went to a restaurant
+            yesterday. """
+print("string_3:", string_3)
+
+
 
 print("""
 ----------------------------------------------
@@ -26,10 +34,9 @@ Syntax:
 
 Example:
 """)
-print('string:', a_string)
 
-print("Number of characters", len(a_string))
-
+a_string = "Hello world"
+print("Number of characters in a_string:", len(a_string))
 
 
 print(r"""
@@ -37,20 +44,19 @@ print(r"""
 
 ESCAPE SEQUENCE
 
-  common: escape sequences
-          newline       \n
-          tab           \t
-          single quote  \'
-          double quote  \"
+  commonly used escape sequences:
 
-Syntax:
-
-  string = '\tstring\tvalue\n'
+          newline           \n
+          tab               \t
+          single quote      \'
+          double quote      \"
 
 Example:
 """)
-a_string = "Dear\tRamsay,\nI am writing this \"letter\"..."
-print('string:', a_string)
+
+
+a_string = "Sincerely,\nPeter Ramsay\nTel:\t(514) 889-3496"
+print(a_string)
 
 
 print(r"""
@@ -66,8 +72,10 @@ Syntax:
 
 Example:
 """)
-a_string = r"Dear\tRamsay,\nI am writing this \"letter\"..."
-print('string:', a_string)
+
+
+a_string = r"Sincerely,\nPeter Ramsay\nTel:\t(514) 889-3496"
+print(a_string)
 
 
 print("""
@@ -75,27 +83,34 @@ print("""
 
 STRING FORMATTING
 
+    A way to construct a string.
+
 Syntax:
 
  A) Relative position
 
-    string = "{} {}".format("Hello", "World")
+    string = "{} {}".format(variable_1, variable_2)
 
  B) Position
 
-    string = "{0} {1}".format("Hello", "World")
+    string = "{0} {1}".format(variable_1, variable_2)
 
  C) Keyword
-    string = "{hi} {world}".format(hi="hello", world="World")
+    string = "{identifier_1} {identifier_2}".format(identifier_1=variable_1,
+               identifier_2="variable_2)
 
 Example:
 """)
-string_name = "{} {}".format("Hello", "World")
-print(string_name)
-string_name = "{0} {0} {1}".format("Hello", "World")
-print(string_name)
-string_name = "{intro} {to}".format(intro="Hello", to="World")
-print(string_name)
+
+
+string = "{} {}".format("Hello", "World")
+print("string:", string)
+
+string_2 = "{0} {0} {0} {1}".format("Hello", "World")
+print("string_2:", string_2)
+
+string_3 = "{intro} {outro}".format(intro="Hi", outro="good bye")
+print("string_3:", string_3)
 
 print("""
 ----------------------------------------------
@@ -108,12 +123,12 @@ Syntax:
 
 Example:
 """)
-string1 = "Hello"
-string2 = " World"
-print("String 1:", string1)
-print("String 2:", string2)
-resultant_string = string1 + string2
-print(string_name)
+
+string_1 = "Hello"
+string_2 = " World"
+string_3 = string_1 + string_2
+print(string_3)
+
 
 
 print("""
@@ -123,36 +138,40 @@ REMOVE LEADING AND TRAILING WHITE SPACE
 
 Syntax:
 
- some_string = " string "
- result = some_string.strip()
+    result = a_string.strip()
 
 Example:
 """)
-a_string = " some string "
-print('original string:' + a_string)
-a_string = a_string.strip()
-print('new string:' + a_string)
 
+string = " hi "
+print(string + string)
+
+new_string = string.strip()
+print(new_string + new_string)
 
 
 print("""
 ----------------------------------------------
 
-FIND CHARACTER IN STRING
+FIND CHARACTER/STRING IN STRING
 
 Syntax:
 
- some_string = " string "
- character = 's'
- result = some_string.find(character)
+    index = some_string.find(string)
+
+Note:
+
+    Character count starts from 0
 
 Example:
 """)
-a_string = "Awesome"
-print("String:", a_string)
-character = 's'
-print("Character", character, 'was first found at index', a_string.find(character))
 
+string = "Hi guys"
+substring = "guy"
+
+print("Substring '{substring}' was found at index '{index}' of string '{string}'".format(
+    substring=substring, index=string.find(substring), string=string
+))
 
 
 print("""
@@ -160,21 +179,69 @@ print("""
 
 REPLACEMENT
 
-    replace all occurrence of a string
+    Replace all occurrence of a string.
 
 Syntax:
 
-    resultant_string = string.replace('to replace', 'replacement')
+    new_string = string.replace(string_to_replace, string_replacement)
 
 Example:
 """)
-a_string = "Idealistic"
-replace = "listic"
-replacement = 'l'
-print('string:', a_string)
-print('Replace "{}" by "{}"'.format(replace, replacement))
-resultant_string = a_string.replace(replace, replacement)
-print('string:', resultant_string)
+
+string = "idealistic"
+to_replace = "listic"
+replacement = "l"
+
+print("string:", string)
+print("Replace {to_replace} by {replacement}".format(to_replace=to_replace, replacement=
+                                                     replacement))
+new_string = string.replace(to_replace, replacement)
+print("new_string:", new_string)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -188,3 +255,34 @@ print('string:', resultant_string)
 #
 # # string to byte
 # 'data'.encode('utf-8')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
