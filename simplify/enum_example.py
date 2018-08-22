@@ -5,10 +5,11 @@ print("""
 
 ENUM
 
-- define a set of constants
+    Define a set of constants
 
 ----------------------------------------------
 \n\n\n""")
+
 
 
 print("""
@@ -33,6 +34,8 @@ class Color(Enum):
     Green = 3
 
 print(Color)
+print(Color.Red)
+
 
 
 print("""
@@ -47,7 +50,11 @@ Syntax:
 
 Example:
 """)
-print('Integer "{value}" represents color "{color}"'.format(value=Color.Blue.value, color=Color.Blue.name))
+
+
+
+print("Integer value {value} represents {color}".format(value=Color.Blue.value,
+                                                        color=Color.Blue.name))
 
 
 
@@ -62,13 +69,16 @@ Syntax:
 
 Example:
 """)
-color = Color.Green
-if color == Color.Red:
-    print("use", color.name)
-elif color == Color.Blue:
-    print("use", color.name)
+
+color = Color.Blue
+
+if color == Color.Blue:
+    print('Use color blue')
 elif color == Color.Green:
-    print("use", color.name)
+    print('Use color green')
+elif color == Color.Red:
+    print('Use color red')
+
 
 print("""
 ----------------------------------------------
@@ -81,5 +91,62 @@ Syntax:
 
 Example:
 """)
-color = Color(Color.Blue.value)
+
+
+color = Color(3)
 print(color)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
