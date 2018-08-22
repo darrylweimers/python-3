@@ -1,271 +1,207 @@
-# print("""
-# ----------------------------------------------
-#
-# LIST
-#
-# - ordered collection of objects
-# - store and fetch by positional offset (0, 1, 3, ...)
-# - nested to arbitrary depth
-# - value can be updated (mutable)
-#
-# ----------------------------------------------
-# \n\n\n""")
-#
-#
-#
-# print("""
-# ----------------------------------------------
-#
-# CREATE A LIST
-#
-# Syntax:
-#
-#     list_name = [ item0 , item1, item2 ]
-#
-#            index    0       1      2
-#
-# Note:
-#  - item (any data type including custom class object) separated by comma
-#  - access by offset start from index 0
-#
-# Example:
-# """)
-# print('list_1 = [0, "b", 3.0, False]')
-# list_1 = [0, "b", 3.0, False]
-# print("list:", list_1)
-#
-# print("""
-# ----------------------------------------------
-#
-# SIZE OF LIST
-#
-# Syntax:
-#
-#    size = len(list)
-#
-# Example:
-# """)
-# print("list:", list_1)
-#
-# print("Number of item in list:", len(list_1))
-#
-#
-#
-#
-# print("""
-# ----------------------------------------------
-#
-# FETCH ALL ITEMS
-#
-# Syntax:
-#
-#  for item in list:
-#     # do something with item
-#
-# Example:
-# """)
-# print("list:", list_1)
-#
-# print('Fetch items:')
-# for item in list_1:
-#     print("{}".format(item), end=", ")
-#
-#
-# print("""
-# ----------------------------------------------
-#
-# FETCH ITEM
-#
-# Syntax:
-#
-#     item = list[index]
-#
-# Example:
-# """)
-# print("list:", list_1)
-#
-# print("First item:", list_1[0])
-# print("Last item:", list_1[len(list_1) - 1])
-#
-#
-#
-#
-# print("""
-# ----------------------------------------------
-#
-# UPDATE ITEM
-#
-# Syntax:
-#
-#     list[index] = new_value
-#
-# Example:
-# """)
-# print("list:", list_1)
-#
-# new_value = 4
-# list_1[-1] = new_value
-# print("Replace last item with", new_value)
-# print("list:", list_1)
-#
-#
-# print("""
-# ----------------------------------------------
-#
-# ADD ITEM
-#
-# Syntax:
-#
-#     A)  list.insert(index, new_item)
-#     B)  list.append(new_item)
-#
-# Note
-#     A) Add new item to desired position in list
-#     B) Add new item to end of list
-#
-# Example:
-# """)
-# print("list:", list_1)
-#
-# print('A) list_2.insert(0, "item")')
-# list_1.insert(0, "item")
-# print("list:", list_1)
-#
-# print('A) list_2.append("new item")')
-# list_1.append("new item")
-# print("list:", list_1)
-#
-#
-# print("""
-# ----------------------------------------------
-#
-# MERGE LIST
-#
-# Syntax:
-#
-#     new_list = list_1 + list_2
-#
-# Example:
-# """)
-# print("list 1:", list_1)
-# list_2 = ["a", "b"]
-# print("list 2:", list_2)
-# resultant_list = list_1 + list_2
-# print("resultant list:", resultant_list)
+print("""
+----------------------------------------------
 
+LIST
 
+- ordered collection of objects
+- store and fetch by positional offset (0, 1, 3, ...)
+- nested to arbitrary depth
+- value can be updated (mutable)
 
+----------------------------------------------
+\n\n\n""")
 
 
+print("""
+----------------------------------------------
 
+CREATE A LIST
 
+Syntax:
 
+    list_identifier = [ item0 , item1, item2 ]
 
+           index    0       1      2
 
+Note:
+ - item (any data type including custom class object) separated by comma
+ - access by offset start from index 0
 
+Example:
+""")
 
+a_list = ['a', 5, 6.7, 'hi']
 
+print("a_list = ['a', 5, 6.7, 'hi']")
+print("a_list:", a_list)
 
 
 
+print("""
+----------------------------------------------
 
+SIZE OF LIST
 
+Syntax:
 
+   size = len(list_identifier)
 
+Example:
+""")
 
+a_list = ['a', 5, 6.7, 'hi']
 
+print("Number of items in a_list:", len(a_list))
 
 
 
+print("""
+----------------------------------------------
 
+FETCH ALL ITEMS
 
+Syntax:
 
+ for item in list_identifier:
+    # do something with item
 
+Example:
+""")
 
+a_list = ['a', 5, 6.7, 'hi']
 
+print("items in a_list:")
+for item in a_list:
+    print(item)
 
 
 
+print("""
+----------------------------------------------
 
+FETCH ITEM
 
+Syntax:
 
+    item = list_identifier[index]
 
+Example:
+""")
 
 
+a_list = ['a', 5, 6.7, 'hi']
 
+print('a_list:', a_list)
 
+print('Fist item:', a_list[0])
+print('Last item:', a_list[len(a_list)-1])
 
 
 
+print("""
+----------------------------------------------
 
+UPDATE ITEM
 
+Syntax:
 
-# print("""
-# ----------------------------------------------
-#
-# DELETE ITEM
-#
-# Syntax:
-#
-#     A)  del list[index]
-#     B)  list.remove(item)
-#     C)  item = list.pop(index)
-#
-# Example:
-# """)
-#
-# a_list = [1, "2", 3.5, "a"]
-# print("a_list:", a_list)
-#
-# print("Option A) Delete")
-# del a_list[0]
-# print("a_list:", a_list)
-#
-# print("Option B) Remove")
-# a_list.remove("a")
-# print("a_list:", a_list)
-#
-# print("Option C) Pop")
-# item = a_list.pop(-1)
-# print("a_list:", a_list)
-# print("item:", item)
+    list_identifier[index] = new_value
 
+Example:
+""")
 
+a_list = ['a', 5, 6.7, 'hi']
+print('a_list:', a_list)
 
 
+new_value = 4
+print("Replace first item in a_list with", new_value)
 
+a_list[0] = new_value
 
+print('a_list', a_list)
 
 
+print("""
+----------------------------------------------
 
+ADD ITEM
 
+Syntax:
 
+    A)  list_identifier.insert(index, new_item)
+    B)  list_identifier.append(new_item)
 
+Note
+    A) Add new item to desired position in list
+    B) Add new item to end of list
 
+Example:
+""")
 
+a_list = ['a', 5, 6.7, 'hi']
+print('a_list', a_list)
 
+print('Option A) append')
+a_list.append("Peter")
+print('a_list', a_list)
 
 
+print('Option B) insert')
+a_list.insert(0, "Peter")
+print('a_list', a_list)
 
 
+print("""
+Merge List
 
+Syntax:
 
+    new_list = list_identifier + list_identifier_2
 
+Example:
+""")
 
 
+numbers_1 = [1, 2, 3, 4]
+numbers_2 = [5, 6, 7, 8]
 
+print('numbers_1:', numbers_1)
+print('numbers_2:', numbers_2)
 
+numbers = numbers_1 + numbers_2
+print('numbers:', numbers)
 
 
+print("""
+----------------------------------------------
 
+DELETE ITEM
 
+Syntax:
 
+    A)  del list[index]
+    B)  list.remove(item)
+    C)  item = list.pop(index)
 
+Example:
+""")
 
+a_list = [1, "2", 3.5, "a"]
+print("a_list:", a_list)
 
+print("Option A) Delete")
+del a_list[0]
+print("a_list:", a_list)
 
+print("Option B) Remove")
+a_list.remove("a")
+print("a_list:", a_list)
 
-
+print("Option C) Pop")
+item = a_list.pop(-1)
+print("a_list:", a_list)
+print("item:", item)
 
 
 print("""
@@ -285,10 +221,6 @@ print("a_list:", a_list)
 
 a_list.clear()
 print("a_list:", a_list)
-
-
-
-
 
 
 
