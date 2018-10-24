@@ -52,3 +52,71 @@ python ternary operator: https://stackoverflow.com/questions/394809/does-python-
 python does not have switch operator
 
 is vs equal: https://stackoverflow.com/questions/2988017/string-comparison-in-python-is-vs 
+
+
+
+
+async 
+
+Async 
+Tasks, Futures, Couroutines 
+Small snippets 
+
+
+Async feature:
+-execute method partially 
+-halting execution 
+Maintain object stack and exception 
+
+
+
+Asyncio 
+Python 3.5  
+
+Single Thread 
+No race condition 
+Async code must run inside event loop 
+
+Keywords: 
+async: use a async keyword to declare a function as a coroutine function  
+	   coroutine object is created when coroutine function is callled  
+
+	   		coroutine: 
+	   		it can be suspended during execution to wait for external processing (some routine in I/O) and return from the point it had stopped when the external processing is done.
+
+
+
+await: use async keyword to block event loop until coroutine object is completed 
+
+Execute a coroutine object using either: 
+-await 
+-schedule with 
+				asyncio.ensure_future(coroutine_object)  				   Note: accepts any awaitable 
+                or 
+                asyncio.get_event_loop.create_task(coroutine object)       Note: accepts coroutine only 
+
+
+Futures: 
+The asyncio module defines its own object Future. Futures represent a processing that has still not been accomplished.
+
+Tasks: This is a subclass of asyncio.Future to encapsulate and manage coroutines.
+-is a way to arrange for a coroutine to be executed by an event loop, while also providing the caller a way to find out what the result was.
+-a task is automatically scheduled for execution when it is created.
+-supervise coroutine run state     
+
+Running event loop:
+We have a number of options for running our event loops:
+-asyncio.get_event_loop.run_forever() which will subsequently run our event loop until the stop() function is called, 
+-run_until_complete(future) and only run our event loop until whatever future object we’ve passed in has completed it’s execution.
+
+Future 
+
+A future is an object that represents something uncompleted. 
+
+Arrange for something to be called when the future becomes done: You can add lots of callbacks. They’ll all be called (one at a time).
+
+When the future is done, mark it done and set its result: The callbacks can call future.result() to find out what the result was if they care.
+Tasks
+
+
+
